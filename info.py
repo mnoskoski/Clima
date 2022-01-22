@@ -8,7 +8,7 @@ def get_info():
     last_upd = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
     # Definindo o site
-    html_page = requests.get("https://weather.com/weather/today/l/-29.63,-51.00").text
+    html_page = requests.get("https://weather.com/weather/today/l/02497c1d67234f59ca3948f6a3361bfe5ebd55a13098b72e30391e48ce83be28").text
     soup = BeautifulSoup(html_page,"lxml")
 
     # Localização
