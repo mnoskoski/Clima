@@ -8,6 +8,10 @@ def get_info():
     last_upd = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
     # Definindo o site
+    # Nesse caso utilizei o link para os dados de Porto Alegre, mas poderia utilizar
+    # outro método, por exemplo passando a longitude e a latitude do local desejado:
+    # https://weather.com/weather/today/l/-30.02,-51.22 - Bairro Marcílio Dias, Porto Alegre, RS
+
     html_page = requests.get("https://weather.com/weather/today/l/02497c1d67234f59ca3948f6a3361bfe5ebd55a13098b72e30391e48ce83be28").text
     soup = BeautifulSoup(html_page,"lxml")
 
