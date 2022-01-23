@@ -33,4 +33,5 @@ def get_info():
 
     # Umidade
     humidity = current_details.find("span",{"data-testid":"PercentageValue"}).text
+    
     return last_upd, location, temperature_c, feelslike, humidity
