@@ -27,7 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Execute Script
-        run: python main.py
+        run: |
+          pip install -r requirements.txt --no-index
+          python main.py
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
