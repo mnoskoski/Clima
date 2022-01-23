@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
+import json
 
 def get_info():
 
@@ -33,4 +34,7 @@ def get_info():
     # Umidade
     humidity = current_details.find("span",{"data-testid":"PercentageValue"}).text
 
+    #print("Data: "+last_upd, "Localizacao: "+location, "Temperatura: "+temperature_c, "Sensacao Termica: "+ feelslike, "Humidade: "+ humidity)
+    #r = json.loads(json.dumps(infos))
+    #print(r)
     return last_upd, location, temperature_c, feelslike, humidity
